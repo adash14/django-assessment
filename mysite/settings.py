@@ -31,7 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # Custom polls app created for this Django project.
+    # Adding this allows Django to find the app's models, templates, tests, and static files.
     "polls.apps.PollsConfig",
+
+    # Built-in Django apps used for the admin site, authentication, sessions, messages, and static files.
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,6 +77,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+# Uses SQLite as the development database.
+# SQLite is sufficient for this tutorial project because it does not require a separate database server.
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
